@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="styles/style.css">
+    
+   
+</head>
+<body>
+
+    <header>
+
+        <div class="logout-container">
+            <a href="index.html" id="logout-btn">Logout</a>
+        </div>
+
+
+        <nav>
+            <ul>
+                
+                <li><a href="#" onclick="showSection('series')">Series</a></li>
+                <li><a href="#" onclick="showSection('movie')">Movies</a></li>
+                <li><a href="#"onclick="showSection('Home')">Home</a></li>
+                <li><a href="#" onclick="showSection('awards')">Awards</a></li>
+                <li><a href="#"onclick="showSection('add')">ADD</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+
+
+    
+    <section id="Home"class="active">
+        
+
+    </section>
+    <section id="add">
+       
+        <h2>Add New Content</h2>
+        <!--yeni content alma bölümü -->
+        <form id="content-form">
+            <label for="content-title">Title:</label>
+            <input type="text" id="content-title" required>
+            
+            <label for="content-description">Description:</label>
+            <textarea id="content-description" required></textarea>
+            
+            <label for="content-page">Select Page:</label>
+            <select id="content-page">
+                <option value="series">Series</option>
+                <option value="movie">Movies</option>
+                <option value="awards">Awards</option>
+            </select>
+            
+            <button type="submit">Add Content</button>
+        </form> 
+      
+      </section>  
+    
+    <section id="series">
+        <h1>Series</h1>
+        
+    </section>
+    
+    <section id="movie">
+        <h1>Movies</h1>
+        
+    </section>
+    
+    <section id="awards">
+        <h1>Awards</h1>
+        
+    </section>
+
+   
+ 
+
+    
+
+    <script src="scripts/admin.js"></script>
+    <script src="scripts/app.js"></script>
+    <div id="admin-content"></div>
+  
+
+
+   
+  
+</body>
+</html>
